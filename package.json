@@ -6,7 +6,9 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "test": "jest --watchAll"
+    "test": "jest",
+    "test:badges": "yarn test && jest-coverage-badges",
+    "test:generate-badges": "yarn jest-coverage-badges --input \"./coverage/coverage-summary.json\" --output \"./badges\""
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,7 @@
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^27.1.0",
+    "jest-coverage-badges": "^1.1.2",
     "prettier": "^2.3.2",
     "rollup": "^2.56.3",
     "rollup-plugin-typescript2": "^0.30.0",

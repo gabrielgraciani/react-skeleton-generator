@@ -3,8 +3,8 @@ import * as React from 'react';
 import { lightOrDark } from '../../helpers/lightOrDark';
 import { useSkeleton } from '../../context/SkeletonContext';
 
+import { SkeletonThemeProvider } from './SkeletonThemeProvider';
 import { SkeletonContainer } from './SkeletonContainer';
-import { SkeletonFlex } from './SkeletonFlex';
 
 import { StyledSkeletonContainer } from './styles';
 import { SkeletonProps } from './types';
@@ -12,7 +12,7 @@ import { SkeletonProps } from './types';
 const Skeleton = ({
   height = '30px',
   width = '100%',
-  borderRadius,
+  borderRadius = '4px',
   style,
   count = 1,
   spaceBetween = '10px',
@@ -37,9 +37,11 @@ const Skeleton = ({
   const renderSkeleton = Array.from(Array(count).keys()).map((_, index) => {
     const key = (Math.random() * 100000).toFixed(5);
 
-    const witdthSkeleton = widthMultiple?.length ? widthMultiple[index] : width;
+    const witdthSkeleton = widthMultiple?.length
+      ? widthMultiple[index] || width
+      : width;
     const heightSkeleton = heightMultiple?.length
-      ? heightMultiple[index]
+      ? heightMultiple[index] || height
       : height;
     return (
       <StyledSkeletonContainer
@@ -61,7 +63,7 @@ const Skeleton = ({
   return <>{renderSkeleton}</>;
 };
 
+Skeleton.SkeletonThemeProvider = SkeletonThemeProvider;
 Skeleton.Container = SkeletonContainer;
-Skeleton.Flex = SkeletonFlex;
 
 export { Skeleton };

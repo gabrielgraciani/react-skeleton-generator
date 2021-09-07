@@ -1,31 +1,49 @@
-import { AnimationTypes, HighlightTypes } from '../types';
+type DisplayTypes =
+  | 'block'
+  | 'flex'
+  | 'none'
+  | 'inline'
+  | 'inline-block'
+  | 'inline-flex';
+type AlignItemsTypes = 'flex-start' | 'center' | 'flex-end';
+type JustifyContentTypes =
+  | 'flex-start'
+  | 'center'
+  | 'flex-end'
+  | 'space-between'
+  | 'space-around'
+  | 'space-evenly';
 
 export interface SkeletonContainerProps {
   /**
-   * Skeleton color, the animation color will be generated automatically depending on the past color, it can be lighter or darker.
+   * Skeleton display, you can change the display of the div
    */
-  color?: string;
+  display?: DisplayTypes;
 
   /**
-   * Skeleton animation, shimmer is like an wave and opacity will appear and disappear.
+   * Skeleton width, set the width.
    */
-  animation?: AnimationTypes;
+  width?: string;
 
   /**
-   * Skeleton animation duration, how long it takes do one cycle of the skeleton animation.
+   * Skeleton height, set the height.
    */
-  animationDuration?: number;
+  height?: string;
+
+  /**
+   * Skeleton alignItems, you can change the alignItems of the div
+   */
+  alignItems?: AlignItemsTypes;
+
+  /**
+   * Skeleton justifyContent, you can change the justifyContent of the div
+   */
+  justifyContent?: JustifyContentTypes;
 
   /**
    * Skeleton style, you can add any style here.
    */
   style?: React.CSSProperties;
-
-  /**
-   * Skeleton Highlight, if passed the 'light' or 'dark' value it will override the skeleton
-   * color value, and the animation color will be based on this prop.
-   */
-  highlight?: HighlightTypes;
 
   /**
    * Skeleton children, you will add the skeleton's children here.
@@ -36,4 +54,12 @@ export interface SkeletonContainerProps {
    * Skeleton dataTestId, used for test component
    */
   dataTestId?: string;
+}
+
+export interface SkeletonContainerStyledProps {
+  display?: DisplayTypes;
+  alignItems?: AlignItemsTypes;
+  justifyContent?: JustifyContentTypes;
+  width?: string;
+  height?: string;
 }

@@ -1,7 +1,12 @@
 module.exports = {
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts(x)', '!src/context/*.ts(x)', '!src/index.tsx'],
-  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']
+  collectCoverageFrom: [
+    'src/**/*.ts(x)',
+    '!src/context/*.ts(x)',
+    '!src/index.tsx',
+  ],
+  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+  coverageReporters: ['lcov', 'json', 'json-summary'],
 };

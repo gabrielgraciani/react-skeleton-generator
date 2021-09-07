@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { SkeletonProvider } from '../../../context/SkeletonContext';
 
-import { SkeletonContainer } from '.';
+import { SkeletonThemeProvider } from '.';
 
 const renderWithSkeletonContext = (
   ui: JSX.Element,
@@ -12,10 +12,10 @@ const renderWithSkeletonContext = (
   return render(<SkeletonProvider>{ui}</SkeletonProvider>, renderOptions);
 };
 
-describe('SkeletonContainer Component', () => {
+describe('SkeletonThemeProvider Component', () => {
   it('should render correctly', () => {
     const { container } = renderWithSkeletonContext(
-      <SkeletonContainer>any children</SkeletonContainer>,
+      <SkeletonThemeProvider>any children</SkeletonThemeProvider>,
       {},
     );
 
@@ -24,14 +24,14 @@ describe('SkeletonContainer Component', () => {
 
   it('should render correctly with props', () => {
     const { container } = renderWithSkeletonContext(
-      <SkeletonContainer
+      <SkeletonThemeProvider
         animation="opacity"
         animationDuration={2}
         color="#ff1"
         highlight="dark"
       >
         any children
-      </SkeletonContainer>,
+      </SkeletonThemeProvider>,
       {},
     );
 

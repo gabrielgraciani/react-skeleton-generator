@@ -1,51 +1,29 @@
 import * as React from 'react';
 
-import { useSkeleton } from '../../../context/SkeletonContext';
-import { withSkeletonContext } from '../../../helpers/withSkeletonContext';
-import { Colors } from '../../../styles/Colors';
-
+import { Container } from './styles';
 import { SkeletonContainerProps } from './types';
-import { StyledContainer } from './styles';
 
-const BaseSkeletonContainer = ({
-  color = Colors.background,
-  animation = 'shimmer',
-  animationDuration = 1,
+export function SkeletonContainer({
+  display = 'flex',
+  alignItems = 'flex-start',
+  justifyContent = 'flex-start',
   style,
-  highlight,
   children,
+  width = '100%',
+  height,
   dataTestId = 'SkeletonContainer',
-}: SkeletonContainerProps): JSX.Element => {
-  const {
-    changeBackgroundColor,
-    changeAnimation,
-    changeHighlight,
-    changeAnimationDuration,
-  } = useSkeleton();
-
-  React.useEffect(() => {
-    changeBackgroundColor(color);
-  }, [color, changeBackgroundColor]);
-
-  React.useEffect(() => {
-    changeAnimation(animation);
-  }, [animation, changeAnimation]);
-
-  React.useEffect(() => {
-    if (highlight) {
-      changeHighlight(highlight);
-    }
-  }, [highlight, changeHighlight]);
-
-  React.useEffect(() => {
-    changeAnimationDuration(animationDuration);
-  }, [animationDuration, changeAnimationDuration]);
-
+}: SkeletonContainerProps): JSX.Element {
   return (
-    <StyledContainer style={style} data-testid={dataTestId}>
+    <Container
+      display={display}
+      width={width}
+      height={height}
+      alignItems={alignItems}
+      justifyContent={justifyContent}
+      style={style}
+      data-testid={dataTestId}
+    >
       {children}
-    </StyledContainer>
+    </Container>
   );
-};
-
-export const SkeletonContainer = withSkeletonContext(BaseSkeletonContainer);
+}

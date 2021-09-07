@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
-const StyledContainer = styled.div``;
+import { SkeletonContainerStyledProps } from './types';
 
-export { StyledContainer };
+const Container = styled.div<SkeletonContainerStyledProps>`
+  display: ${props => props.display};
+  align-items: ${props => props.alignItems};
+  justify-content: ${props => props.justifyContent};
+  width: ${props => props.width};
+  height: ${props => props.height};
+`;
+
+export { Container };
