@@ -2,7 +2,7 @@
 
 Generate amazing and animated loading skeletons that will automate and help your work.
 
-![Gif of skeleton in action](/media/images/demo.gif)
+![Gif of skeleton in action](https://media4.giphy.com/media/xKOZHXdms7Y9boZkEC/giphy.gif?cid=790b7611f676cdbbc359fdb46c1f054096d02d3179c187b7&rid=giphy.gif&ct=g)
 
 ## Coverage reports
 
@@ -252,7 +252,7 @@ Common props you may want to specify include:
 
 To generate an skeleton loader like the image below, here is an example for you:
 
-![GitHub Logo](/media/images/example.jpg)
+![GitHub Logo](https://i.imgur.com/kZiEUD6.png)
 
 ```javascript
 import { Skeleton } from 'react-skeleton-generator';
