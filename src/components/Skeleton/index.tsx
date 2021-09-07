@@ -26,7 +26,7 @@ const Skeleton = ({
 
   React.useEffect(() => {
     if (highlight) {
-      setIsLighten(highlight === 'light');
+      setIsLighten(highlight !== 'light');
     } else {
       const isColorLight = lightOrDark(backgroundColor);
 
