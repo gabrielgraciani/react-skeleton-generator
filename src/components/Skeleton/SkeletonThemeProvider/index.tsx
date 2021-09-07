@@ -50,4 +50,12 @@ const BaseSkeletonThemeProvider = ({
 
 export const SkeletonThemeProvider = withSkeletonContext(
   BaseSkeletonThemeProvider,
-);
+) as ({
+  color,
+  animation,
+  animationDuration,
+  style,
+  highlight,
+  children,
+  dataTestId,
+}: SkeletonThemeProviderProps) => JSX.Element;
