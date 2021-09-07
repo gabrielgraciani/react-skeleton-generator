@@ -21,7 +21,7 @@
     "skeleton loader"
   ],
   "author": "Gabriel Thomaz Graciani",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gabrielgraciani/react-skeleton-generator/issues"
   },
