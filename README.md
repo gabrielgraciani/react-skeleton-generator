@@ -28,7 +28,7 @@ import { Skeleton } from 'react-skeleton-generator';
 
 Common props you may want to specify include:
 
-- ```<Skeleton.SkeletonThemeProvider />``` PROPS:
+- ## ```<Skeleton.SkeletonThemeProvider />```
   - ### Color
     `color`: String, defaults to #F1EFF1
 
@@ -94,7 +94,7 @@ Common props you may want to specify include:
 
     used for test component.
 
-- ```<Skeleton.Container />``` PROPS:
+- ## ```<Skeleton.Container />```
   - ### Width
   `width`: String, defaults to 100%
 
@@ -171,7 +171,7 @@ Common props you may want to specify include:
 
   Used to set the width of container.
 
-- ```<Skeleton />``` props:
+- ## ```<Skeleton />```
   - ### Width
   `width`: String, defaults to 100%
 
