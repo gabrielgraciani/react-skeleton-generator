@@ -2,12 +2,13 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 
 import { SkeletonContext } from '../../context/SkeletonContext';
+import { Colors } from '../../styles/Colors';
 
 import { Skeleton } from '.';
 import { SkeletonContextProps } from './types';
 
 const contextData = {
-  backgroundColor: '#F1EFF1',
+  backgroundColor: Colors.background,
 } as SkeletonContextProps;
 
 const renderWithSkeletonContext = (

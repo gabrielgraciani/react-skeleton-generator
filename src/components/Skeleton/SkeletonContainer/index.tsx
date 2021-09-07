@@ -2,13 +2,13 @@ import * as React from 'react';
 
 import { useSkeleton } from '../../../context/SkeletonContext';
 import { withSkeletonContext } from '../../../helpers/withSkeletonContext';
+import { Colors } from '../../../styles/Colors';
 
 import { SkeletonContainerProps } from './types';
 import { StyledContainer } from './styles';
 
-
 const BaseSkeletonContainer = ({
-  color = '#F1EFF1',
+  color = Colors.background,
   animation = 'shimmer',
   animationDuration = 1,
   style,
@@ -49,4 +49,3 @@ const BaseSkeletonContainer = ({
 };
 
 export const SkeletonContainer = withSkeletonContext(BaseSkeletonContainer);
-

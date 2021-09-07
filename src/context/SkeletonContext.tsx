@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Colors } from '../styles/Colors';
+
 import {
   SkeletonContextProps,
   IAuthProviderProps,
@@ -12,9 +14,13 @@ export const SkeletonContext = React.createContext<SkeletonContextProps>(
 );
 
 const SkeletonProvider = ({ children }: IAuthProviderProps): JSX.Element => {
-  const [backgroundColor, setBackgroundColor] = React.useState('#F1EFF1');
+  const [backgroundColor, setBackgroundColor] = React.useState(
+    Colors.background,
+  );
   const [animation, setAnimation] = React.useState<AnimationTypes>('shimmer');
-  const [highlight, setHighlight] = React.useState<HighlightTypes | undefined>();
+  const [highlight, setHighlight] = React.useState<
+    HighlightTypes | undefined
+  >();
   const [animationDuration, setAnimationDuration] = React.useState(1);
 
   const changeBackgroundColor = React.useCallback((color: string) => {
