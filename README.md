@@ -38,8 +38,6 @@ Common props you may want to specify include:
 
     The color of skeleton, the animation color will be generated automatically depending on the passed color, it can be lighter or darker (generate automatically).
 
-  <br />
-
   - ### Animation
     `animation`: 'opacity' | 'shimmer', defaults to 'shimmer'
 
@@ -48,8 +46,6 @@ Common props you may want to specify include:
     ```
 
     There are two types of effects, `shimmer` is like an wave and `opacity` will appear and disappear.
-
-  <br />
 
   - ### Animation Duration
     `animationDuration`: Number, defaults to 1
@@ -60,8 +56,6 @@ Common props you may want to specify include:
 
     How long it takes do one cycle of the skeleton animation.
 
-  <br />
-
   - ### Highlight
     `highlight`: 'light' | 'dark' | undefined, defaults to undefined
 
@@ -71,8 +65,6 @@ Common props you may want to specify include:
 
     There are two types, if passed the `light` or `dark` value it will override the skeleton color value, and the animation color will be based on this prop (darker or lighter).
 
-  <br />
-
   - ### Style
     `style`: React.CSSProperties, defaults to undefined
 
@@ -81,8 +73,6 @@ Common props you may want to specify include:
     ```
 
     Free style when it's possible add any style here.
-
-  <br />
 
   - ### Children
     `children`: React.ReactNode
@@ -95,8 +85,6 @@ Common props you may want to specify include:
 
      it will used to add the skeleton here.
 
-  <br />
-
   - ### DataTestId
     `dataTestId`: String, defaults to SkeletonThemeProvider
 
@@ -105,9 +93,6 @@ Common props you may want to specify include:
     ```
 
     used for test component.
-
-<br />
-<br />
 
 - ```<Skeleton.Container />``` PROPS:
   - ### Width
@@ -119,8 +104,6 @@ Common props you may want to specify include:
 
   Used to set the width of container.
 
-  <br />
-
   - ### Height
   `height`: String, defaults to inherit
 
@@ -129,8 +112,6 @@ Common props you may want to specify include:
   ```
 
   Used to set the width of container.
-
-  <br />
 
   - ### Display
   `display`: 'block' | 'flex' | 'none' | 'inline' | 'inline-block' | 'inline-flex', defaults to flex
@@ -141,8 +122,6 @@ Common props you may want to specify include:
 
   Used to change the display of the container
 
-  <br />
-
   - ### AlignItems
   `alignItems`: 'flex-start' | 'center' | 'flex-end', defaults to flex-start
 
@@ -151,8 +130,6 @@ Common props you may want to specify include:
   ```
 
   Used to change the alignItems of the container, if the container is `display: flex`.
-
-  <br />
 
   - ### JustifyContent
   `width`: 'flex-start' | 'center'  | 'flex-end'  | 'space-between'  | 'space-around' | 'space-evenly', defaults to flex-start
@@ -163,8 +140,6 @@ Common props you may want to specify include:
 
   Used to change the justifyContent of the container, if the container is `display: flex`.
 
-  <br />
-
   - ### Style
     `style`: React.CSSProperties, defaults to undefined
 
@@ -173,8 +148,6 @@ Common props you may want to specify include:
     ```
 
     Free style when it's possible add any style here.
-
-  <br />
 
   - ### Children
     `children`: React.ReactNode
@@ -187,8 +160,6 @@ Common props you may want to specify include:
 
      it will used to add the skeleton here.
 
-  <br />
-
   - ### DataTestId
     `dataTestId`: String, defaults to SkeletonContainer
 
@@ -200,9 +171,6 @@ Common props you may want to specify include:
 
   Used to set the width of container.
 
-<br />
-<br />
-
 - ```<Skeleton />``` props:
   - ### Width
   `width`: String, defaults to 100%
@@ -213,8 +181,6 @@ Common props you may want to specify include:
 
   Used to set the width of skeleton.
 
-  <br />
-
   - ### Height
   `height`: String, defaults to 30px
 
@@ -223,8 +189,6 @@ Common props you may want to specify include:
   ```
 
   Used to set the width of skeleton.
-
-  <br />
 
   - ### BorderRadius
   `borderRadius`: String, defaults to 4px
@@ -235,8 +199,6 @@ Common props you may want to specify include:
 
   Used to set the borderRadius of skeleton.
 
-  <br />
-
   - ### Count
   `count`: Number, defaults to 1
 
@@ -245,8 +207,6 @@ Common props you may want to specify include:
   ```
 
   Used to set how many lines will be generate.
-
-  <br />
 
   - ### SpaceBetween
   `spaceBetween`: String, defaults to 10px
@@ -257,8 +217,6 @@ Common props you may want to specify include:
 
   Used to set the space that will be generate each lines if `count > 1`
 
-  <br />
-
   - ### WidthMultiple
   `widthMultiple`: String, defaults to undefined
 
@@ -268,8 +226,6 @@ Common props you may want to specify include:
 
   Used to set the width for each skeleton if `count > 1`
 
-  <br />
-
   - ### HeightMultiple
   `heightMultiple`: String, defaults to undefined
 
@@ -278,8 +234,6 @@ Common props you may want to specify include:
   ```
 
   Used to set the height for each skeleton if `count > 1`
-
-  <br />
 
   - ### DataTestId
     `dataTestId`: String, defaults to Skeleton
@@ -291,8 +245,6 @@ Common props you may want to specify include:
     used for test component.
 
     Used to set the width of skeleton.
-
-<br />
 
 ## Example
 
