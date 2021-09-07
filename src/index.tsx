@@ -1,4 +1,4 @@
 import { Skeleton } from './components/Skeleton';
 
-export { Skeleton}
+export { Skeleton };
 

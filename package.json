@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -24,11 +25,19 @@
   },
   "homepage": "https://github.com/gabrielgraciani/react-skeleton-generator#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^27.0.1",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.14",
+    "jest": "^27.1.0",
     "rollup": "^2.56.3",
     "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
   },
   "dependencies": {

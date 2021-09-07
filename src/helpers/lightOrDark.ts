@@ -10,7 +10,6 @@ export function lightOrDark(color: any): 'light' | 'dark' {
   let b;
 
   let colorTemp = color;
-  console.log('color', color)
 
   // Check the format of the color, HEX or RGB?
   if (colorTemp.match(/^rgb/)) {

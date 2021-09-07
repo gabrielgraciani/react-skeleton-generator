@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { render } from '@testing-library/react';
 
 import { SkeletonContext } from '../../context/SkeletonContext';
@@ -85,7 +86,7 @@ describe('Skeleton Component', () => {
   });
 
   it('should render with animation and duration', () => {
-    const { getByTestId, debug } = renderWithSkeletonContext(
+    const { getByTestId } = renderWithSkeletonContext(
       <Skeleton width="200px" height="100px" borderRadius="20px" />,
       {
         providerProps: {
@@ -96,12 +97,10 @@ describe('Skeleton Component', () => {
       },
     );
 
-    debug();
-
     const skeleton = getByTestId('Skeleton-0');
 
     expect(skeleton).toHaveStyle(
-      'animation: jTpgNv 3s linear infinite alternate',
+      'animation: gaRJIt 3s linear infinite alternate',
     );
   });
 });
