@@ -94,83 +94,6 @@ Common props you may want to specify include:
 
     used for test component.
 
-- ## ```<Skeleton.Container />```
-  - ### Width
-  `width`: String, defaults to 100%
-
-  ```javascript
-  <Skeleton.Container width="80%" />
-  ```
-
-  Used to set the width of container.
-
-  - ### Height
-  `height`: String, defaults to inherit
-
-  ```javascript
-  <Skeleton.Container height="500px" />
-  ```
-
-  Used to set the width of container.
-
-  - ### Display
-  `display`: 'block' | 'flex' | 'none' | 'inline' | 'inline-block' | 'inline-flex', defaults to flex
-
-  ```javascript
-  <Skeleton.Container display="block" />
-  ```
-
-  Used to change the display of the container
-
-  - ### AlignItems
-  `alignItems`: 'flex-start' | 'center' | 'flex-end', defaults to flex-start
-
-  ```javascript
-  <Skeleton.Container alignItems="center" />
-  ```
-
-  Used to change the alignItems of the container, if the container is `display: flex`.
-
-  - ### JustifyContent
-  `width`: 'flex-start' | 'center'  | 'flex-end'  | 'space-between'  | 'space-around' | 'space-evenly', defaults to flex-start
-
-  ```javascript
-  <Skeleton.Container justifyContent="center" />
-  ```
-
-  Used to change the justifyContent of the container, if the container is `display: flex`.
-
-  - ### Style
-    `style`: React.CSSProperties, defaults to undefined
-
-    ```javascript
-    <Skeleton.Container style={{ padding: '10px' }} />
-    ```
-
-    Free style when it's possible add any style here.
-
-  - ### Children
-    `children`: React.ReactNode
-
-    ```javascript
-    <Skeleton.Container>
-      <Skeleton />
-    </Skeleton.Container>
-    ```
-
-     it will used to add the skeleton here.
-
-  - ### DataTestId
-    `dataTestId`: String, defaults to SkeletonContainer
-
-    ```javascript
-    <Skeleton.Container dataTestId="anyTestId" />
-    ```
-
-    used for test component.
-
-  Used to set the width of container.
-
 - ## ```<Skeleton />```
   - ### Width
   `width`: String, defaults to 100%
@@ -258,14 +181,14 @@ To generate an skeleton loader like the image below, here is an example for you:
 import { Skeleton } from 'react-skeleton-generator';
 
 <Skeleton.SkeletonThemeProvider>
-  <Skeleton.Container justifyContent="space-between" alignItems="center" style={{padding: '20px'}}>
+  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
     <Skeleton
       width="50px"
       height="50px"
       borderRadius="50%"
     />
 
-    <Skeleton.Container display="block" width="85%">
+    <div style={{ width: '85%' }}>
       <Skeleton
         width="100%"
         height="50px"
@@ -274,10 +197,10 @@ import { Skeleton } from 'react-skeleton-generator';
         widthMultiple={['100%', '50%', '75%']}
         heightMultiple={['50px', '20px', '15px']}
       />
-    </Skeleton.Container>
-  </Skeleton.Container>
+    </div>
+  </div>
 
-  <Skeleton.Container display="block" style={{ marginTop: '20px'}}>
+  <div style={{ marginTop: '20px' }}>
     <Skeleton
       width="100%"
       height="50px"
@@ -286,9 +209,9 @@ import { Skeleton } from 'react-skeleton-generator';
       widthMultiple={['100%', '100%', '80%']}
       heightMultiple={['20px', '20px', '20px']}
     />
-  </Skeleton.Container>
+  </div>
 
-  <Skeleton.Container justifyContent="space-between" style={{marginTop: '30px'}}>
+  <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '30px' }}>
     <Skeleton
       width="48%"
       height="50px"
@@ -300,7 +223,7 @@ import { Skeleton } from 'react-skeleton-generator';
       height="50px"
       borderRadius="10px"
     />
-  </Skeleton.Container>
+  </div>
 </Skeleton.SkeletonThemeProvider>
 ```
 

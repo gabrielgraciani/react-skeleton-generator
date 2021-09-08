@@ -4,7 +4,6 @@ import { lightOrDark } from '../../helpers/lightOrDark';
 import { useSkeleton } from '../../context/SkeletonContext';
 
 import { SkeletonThemeProvider } from './SkeletonThemeProvider';
-import { SkeletonContainer } from './SkeletonContainer';
 
 import { StyledSkeletonContainer } from './styles';
 import { SkeletonProps } from './types';
@@ -64,6 +63,5 @@ const Skeleton = ({
 };
 
 Skeleton.SkeletonThemeProvider = SkeletonThemeProvider;
-Skeleton.Container = SkeletonContainer;
 
 export { Skeleton };

@@ -101,7 +101,7 @@ describe('Skeleton Component', () => {
     const skeleton = getByTestId('Skeleton-0');
 
     expect(skeleton).toHaveStyle(
-      'animation: gaRJIt 3s linear infinite alternate',
+      'animation: itodjY 3s linear infinite alternate',
     );
   });
 });
