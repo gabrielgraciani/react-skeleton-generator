@@ -188,10 +188,8 @@ import { Skeleton } from 'react-skeleton-generator';
       borderRadius="50%"
     />
 
-    <div style={{ width: '85%' }}>
+    <div style={{ width: '400px' }}>
       <Skeleton
-        width="100%"
-        height="50px"
         borderRadius="10px"
         count={3}
         widthMultiple={['100%', '50%', '75%']}
@@ -202,8 +200,6 @@ import { Skeleton } from 'react-skeleton-generator';
 
   <div style={{ marginTop: '20px' }}>
     <Skeleton
-      width="100%"
-      height="50px"
       borderRadius="10px"
       count={3}
       widthMultiple={['100%', '100%', '80%']}
